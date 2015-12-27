@@ -1,0 +1,41 @@
+buildscript {
+    ext.kotlin_version = '1.0.0-beta-3595'
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'application'
+
+defaultTasks 'run'
+mainClassName = 'moe.pine.mock.sample.Main'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.10.19'
+    testCompile 'org.powermock:powermock-api-mockito:1.6.4'
+    testCompile 'org.powermock:powermock-module-junit4:1.6.4'
+    testCompile 'org.powermock:powermock-core:1.6.4'
+}
+
+sourceSets {
+    main {
+        kotlin.srcDirs += 'src/main/kotlin'
+        java.srcDirs += 'src/main/java'
+    }
+    test {
+        kotlin.srcDirs += 'src/test/kotlin'
+        java.srcDirs += 'src/test/java'
+    }
+}
