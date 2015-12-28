@@ -17,4 +17,7 @@ $ ./gradlew run
 
 ```
 $ ./gradlew test
-``
+```
+
+### ライセンス
+Public Domain
