@@ -19,5 +19,5 @@ $ ./gradlew run
 $ ./gradlew test
 ```
 
-### ライセンス
+## ライセンス
 Public Domain
